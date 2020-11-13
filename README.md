@@ -4,7 +4,7 @@ Advanced and fast event emitter for node, browser &amp; others
 # Enable events on your objects
 
 ## By extending this class
-This is the preffered
+This is the best way
 ```javascript
 // If you use "core-ui", use "Core.EventEmitter"
 class MyClass extends EventEmitter {
@@ -26,6 +26,15 @@ EventEmitter.applyTo(myObject);
 
 // Apply event service as static methods to MyClass
 EventEmitter.applyTo(MyClass);
+```
+
+# Event name sensitive case
+Your can use any type as eventName and not only strings
+if you use a string, by default it's non sensitive case
+to change this, set `_eventNameIgnoreCase` flag to "false"
+```javascript
+// To enable case sensitive:
+myObject._eventNameIgnoreCase= false;
 ```
 
 # Add listener to an event

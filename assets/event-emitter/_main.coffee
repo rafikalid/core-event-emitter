@@ -115,8 +115,8 @@ class EventEmitter
 			throw error
 		this # chain
 	###* when unknown event emitted ###
-	catchUnknownEvent: (eventName)->
-		Core.error "Uncaught error event", data arguments if eventName is 'error'
+	catchUnknownEvent: (eventName, data)->
+		Core.error "Uncaught error event", data if eventName is 'error'
 		return
 	###* List all event names ###
 	listEventNames: ->

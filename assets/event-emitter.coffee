@@ -4,8 +4,8 @@
 <% var Core= false; %>
 do->
 	"use strict"
-	#=_utils.coffee
-	#=event-emitter/_main.coffee
+	#=include _utils.coffee
+	#=include event-emitter/_main.coffee
 
 	# Export interface
 	if module? then module.exports= EventEmitter

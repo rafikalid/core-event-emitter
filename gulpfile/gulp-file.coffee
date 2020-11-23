@@ -13,9 +13,9 @@ compiler= new GridfwGulp Gulp,
 module.exports= compiler
 	.js
 		name:	'API>> Compile Coffee files'
-		src:	'assets/component.coffee'
+		src:	'assets/event-emitter.coffee'
 		dest:	'build/'
-		watch:	['assets/component.coffee', 'assets/component/**/*.coffee']
+		watch:	['assets/**/*.coffee']
 		# data:	params
 		# babel:	<%- isProd %>
 	###* Copy static files ###

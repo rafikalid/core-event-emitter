@@ -29,8 +29,8 @@ EventEmitter.applyTo(MyClass);
 ```
 
 # Event name sensitive case
-Your can use any type as eventName and not only strings
-if you use a string, by default it's non sensitive case
+Your can use any type as eventName and not only strings.
+if you use a string, by default it's insensitive case.
 to change this, set `_eventNameIgnoreCase` flag to "false"
 ```javascript
 // To enable case sensitive:

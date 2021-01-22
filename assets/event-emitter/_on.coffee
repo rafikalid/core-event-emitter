@@ -5,7 +5,8 @@ __eventEmitter_on= (obj, eventName, listener, isOnce)->
 	throw 'EventName could not be empty' unless eventName?
 	throw "Listener expected function" unless typeof listener is 'function'
 	if typeof eventName is 'string'
-		__eventEmitter_on2 obj, eventName.trim().split(/\s+/), listener, isOnce
+		eventName= eventName.trim().split /\s+/
+		__eventEmitter_on2 obj, ev, listener, isOnce for ev in eventName
 	else if _isArray eventName
 		__eventEmitter_on obj, ev, listener, isOnce for ev in eventName
 	else
